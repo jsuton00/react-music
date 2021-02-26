@@ -1,0 +1,73 @@
+.music-details {
+	width: 100%;
+	height: 100%;
+	padding: 0.25rem;
+}
+
+.music-details-content {
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding: 0.25rem 1rem;
+}
+
+.music-details-card {
+	width: 25rem;
+	height: 100%;
+	padding: 0.25rem;
+	background: rgba(255, 255, 255, 0.7);
+	box-shadow: 0 0.5rem 2rem 0 rgba(31, 38, 135, 0.369);
+	backdrop-filter: blur(0.25rem);
+	-webkit-backdrop-filter: blur(0.25rem);
+	border-radius: 2rem;
+}
+
+.music-details-artwork {
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	max-height: 20rem;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center center;
+	object-position: center center;
+	border-radius: 1.5rem;
+}
+
+.music-details-card .song-title {
+	font-size: 1.25rem;
+	font-weight: 600;
+	width: 100%;
+	padding: 0.25rem 0;
+	text-align: center;
+}
+
+.music-details-card .release-date {
+	width: 100%;
+	padding: 0.25rem 0;
+	text-align: center;
+}
+
+.music-details-footer {
+	background-color: transparent;
+	width: 100%;
+	text-align: center;
+}
+
+.music-details-player {
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	padding: 0.25rem 0;
+}
+
+.music-player {
+	width: 100%;
+	text-align: center;
+}
+
+.music-player audio {
+	width: 100%;
+	box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.18);
+}
