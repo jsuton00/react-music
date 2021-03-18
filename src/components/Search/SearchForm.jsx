@@ -1,11 +1,11 @@
-import { Search } from '@material-ui/icons';
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import * as actions from '../store/actions/index';
+import * as actions from '../../store/actions/index';
+import { Search } from '@material-ui/icons';
 
 const SearchForm = () => {
 	const dispatch = useDispatch();
-	const searchTerm = useSelector((state) => state.searchTerm);
+	const searchTerm = useSelector((state) => state.search.searchTerm);
 	const inputRef = useRef();
 
 	useEffect(() => {
@@ -27,7 +27,7 @@ const SearchForm = () => {
 	};
 
 	return (
-		<div id="search-form" className="search-form row">
+		<div className="search-form row">
 			<span className="search-icon">
 				<Search />
 			</span>

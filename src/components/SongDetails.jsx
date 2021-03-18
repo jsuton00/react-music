@@ -3,8 +3,8 @@ import ReactAudioPlayer from 'react-audio-player';
 import { useSelector } from 'react-redux';
 import '../styles/components/musicDetails.css';
 
-const MusicDetails = () => {
-	const selectedSong = useSelector((state) => state.song);
+const SongDetails = () => {
+	const selectedSong = useSelector((state) => state.songs.song);
 
 	return (
 		<div className="music-details container-fluid">
@@ -47,4 +47,4 @@ const MusicDetails = () => {
 	);
 };
 
-export default MusicDetails;
+export default SongDetails;

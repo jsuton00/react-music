@@ -1,7 +1,7 @@
 import createSagaMiddleware from 'redux-saga';
 import { applyMiddleware, compose, createStore } from 'redux';
-import reducer from './reducers/reducer';
 import { watchMusic } from './sagas';
+import rootReducer from './reducers';
 
 const composeEnhancers =
 	process.env.NODE_ENV === 'development'
@@ -11,7 +11,7 @@ const composeEnhancers =
 const sagaMiddleware = createSagaMiddleware();
 
 export const store = createStore(
-	reducer,
+	rootReducer,
 	composeEnhancers(applyMiddleware(sagaMiddleware)),
 );
 

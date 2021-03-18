@@ -22,6 +22,7 @@ const ResultsListItem = (props) => {
 			selectResults(e.target.value);
 		}
 	};
+
 	return (
 		<div
 			ref={resultCardRef}

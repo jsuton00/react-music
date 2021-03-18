@@ -1,44 +1,37 @@
 .search-bar {
-	justify-content: space-between;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	width: 100%;
 	max-width: 100%;
+	height: 100%;
 	padding: 0.25rem 0;
 }
 
 .search-form {
 	position: relative;
-	flex-basis: 70%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	width: 100%;
-	height: 100%;
+	max-width: 100%;
+	padding: 0 0.5rem;
 }
 
 .search-icon {
 	position: absolute;
+	display: inline-block;
 	top: 0;
 	left: 0;
 	width: auto;
-	padding: 0.57rem 1.25rem;
+	height: 100%;
+	font-size: 0.88rem;
+	padding: 0.57rem 1rem;
 }
 
 .search-input {
 	border-radius: 2rem;
 	width: 100%;
 	max-width: 100%;
-	padding: 0.5rem 2rem;
-	margin: 0 auto;
-}
-
-.select {
-	flex-basis: 28%;
-	width: 100%;
-	max-width: 100%;
-	border-radius: 2rem;
-	padding: 0.625rem 2rem;
-	margin: 0 auto;
-	text-transform: capitalize;
-}
-
-.select-option {
-	text-transform: capitalize;
+	padding: 0.5rem 2.1rem;
 }

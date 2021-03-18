@@ -1,12 +1,13 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import * as actions from '../store/actions/index';
-import '../styles/components/searchResults.css';
-import ResultsListItem from './ResultsListItem';
+import { useDispatch } from 'react-redux';
+import { useSearch } from './Search';
+import * as actions from '../../store/actions/index';
+import ResultsListItem from '../ResultsListItem';
+import '../../styles/components/searchResults.css';
 
 const SearchResults = () => {
 	const dispatch = useDispatch();
-	const songs = useSelector((state) => state.filteredSongs);
+	const [songs] = useSearch();
 
 	return (
 		<div

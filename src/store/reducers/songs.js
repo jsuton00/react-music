@@ -1,45 +1,25 @@
-import { updateObject } from '../../utils/reduxUtils';
 import * as actionTypes from '../actions/actionTypes';
+import { updateObject } from '../../utils/reduxUtils';
 
-const initialState = {
-	music: [],
-	filteredMusic: [],
-	artists: [],
-	filteredArtists: [],
-	albums: [],
-	filteredAlbums: [],
+const songState = {
 	songs: [],
 	filteredSongs: [],
-	searchTerm: '',
-	artistId: '',
-	collectionId: '',
 	trackId: '',
-	artist: '',
-	album: '',
 	song: '',
-	loadingMusic: false,
-	errorSearchMusic: false,
+	loadingSongs: false,
+	errorSearchSongs: false,
 };
 
-const loadingMusic = (state, action) => {
+const loadingSongs = (state, action) => {
 	return updateObject(state, {
-		loadingMusic: true,
-		errorSearchMusic: false,
-	});
-};
-
-const setSearchTerm = (state, action) => {
-	return updateObject(state, {
-		searchTerm: action.searchTerm,
-		loadingMusic: false,
-		errorSearchMusic: false,
+		loadingSongs: true,
 	});
 };
 
 const searchSongsFail = (state, action) => {
 	return updateObject(state, {
-		loadingMusic: false,
-		errorSearchMusic: false,
+		loadingSongs: false,
+		errorSearchSongs: false,
 	});
 };
 
@@ -47,8 +27,8 @@ const searchSongsSuccess = (state, action) => {
 	return updateObject(state, {
 		songs: action.songs,
 		filteredSongs: action.songs,
-		loadingMusic: false,
-		errorSearchMusic: false,
+		loadingSongs: false,
+		errorSearchSongs: false,
 	});
 };
 
@@ -65,12 +45,10 @@ const selectSong = (state, action) => {
 	});
 };
 
-const reducer = (state = initialState, action) => {
+const songsReducers = (state = songState, action) => {
 	switch (action.type) {
 		case actionTypes.LOADING_MUSIC:
-			return loadingMusic(state, action);
-		case actionTypes.SET_SEARCH_TERM:
-			return setSearchTerm(state, action);
+			return loadingSongs(state, action);
 		case actionTypes.SEARCH_SONGS_FAIL:
 			return searchSongsFail(state, action);
 		case actionTypes.SEARCH_SONGS_SUCCESS:
@@ -82,4 +60,4 @@ const reducer = (state = initialState, action) => {
 	}
 };
 
-export default reducer;
+export default songsReducers;
